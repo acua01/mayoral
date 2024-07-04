@@ -16,6 +16,6 @@ Ejecutar `npm run dev` o `yarn run dev` y se inicializará el servidor de desarr
 Para lanzar los tests se debe de ejecutar `npm run test` o `yarn run test`. Si se quiere ver un reporte del coverage `npm run test:coverage` o `yarn run test:coverage`
 
 # Tecnologías
-- **Next.js**. Dentro de esta se han utilizado **Hooks** para los estados y **Custom Hooks** para la refactorización de la lógica, junto con la componetización.
+- **Next.js**. Dentro de esta se han utilizado **Hooks** para los estados, **Custom Hooks** para la refactorización de la lógica y **getStaticProps** para consumir el JSON en la parte del servidor.
 - **SASS** junto a la metodología **BEMIT** o **BEM + ITCSS** para todo el estilado, animación y responsive de la aplicación.
 - **Jest** junto con **Testing Library** para los tests.
