@@ -10,7 +10,7 @@ export const ClothesCard: FC<IClothes> = ({image, name, price, discount, moreCol
       <figure className="c-clothes-card__image-container">
         <Image src={image} width={100} height={100} layout="responsive" alt={name} title={name}/>
       </figure>
-      <p className="c-clothes-card__name">{name}</p>
+      <p className="c-clothes-card__name" aria-label="clothes-name">{name}</p>
       <div className="c-clothes-card__price-container">
         <span className={`c-clothes-card__price-container__price ${discount ? 'line-through' : ''}`}>
           {priceFormatter(price)}

@@ -1,4 +1,3 @@
-import { priceFormatter } from "@utils/priceFormatter";
 import { sortClothes } from "@utils/sortClothes";
 
 const data = [
@@ -10,23 +9,30 @@ const data = [
     "image": "/image.png"
   },
   {
-    "name": "Conjunto 2 piezas rayas Better Cotton niño",
+    "name": "Test 2",
     "price": 25.99,
-    "discount": 30,
     "moreColors": false,
-    "image": "/images/Conjunto 2 piezas rayas Better Cotton niño 2.png"
+    "image": "/image.png"
   },
   {
-    "name": "Conjunto 3 piezas sport Better Cotton niño",
+    "name": "Test 3",
     "price": 22.99,
-    "discount": 20,
+    "discount": 10,
     "moreColors": true,
-    "image": "/images/Conjunto 3 piezas sport Better Cotton niño.png"
+    "image": "/image.png"
   },
-]
+];
 
 describe('sortClothes tests', () => {
-  it('Return correct value', () => {
-    expect(sortClothes([], 'asc')).toBe("€");
+  it('Return correct value with asc order', () => {
+    expect(sortClothes(data, 'asc')[0].name).toBe("Test 1");
+    expect(sortClothes(data, 'asc')[1].name).toBe("Test 3");
+    expect(sortClothes(data, 'asc')[2].name).toBe("Test 2");
+  });
+
+  it('Return correct value with desc order', () => {
+    expect(sortClothes(data, 'desc')[0].name).toBe("Test 2");
+    expect(sortClothes(data, 'desc')[1].name).toBe("Test 3");
+    expect(sortClothes(data, 'desc')[2].name).toBe("Test 1");
   });
 });
