@@ -1,0 +1,23 @@
+.c-order-by-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &__label {
+    padding-left: 10px;
+    font-size: 14px;
+    color: #AAAAAA;
+  }
+  &__selector {
+    width: 100%;
+    border: 3px solid #E3E3E3;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    & > option {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

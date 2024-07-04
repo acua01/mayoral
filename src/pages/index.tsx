@@ -1,7 +1,8 @@
 import { NextPage } from "next";
+import { ClothesList } from "views/ClothesList/ClothesList";
 
 const HomePage: NextPage = () => {
-  return <div>Hello World!</div>;
+  return <ClothesList />;
 };
 
 export default HomePage;

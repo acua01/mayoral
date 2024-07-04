@@ -1,0 +1,15 @@
+.c-icons-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+  & > svg {
+    color: #E5E4E3;
+    font-size: 35px;
+    cursor: pointer;
+    &:first-child {
+      opacity: .6;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.c-clothes-list {
+  padding: 20px;
+  &__filters-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @media screen and (max-width:792px) {
+      grid-template-columns: repeat(1, 1fr);
+      & .c-icons-bar {
+        justify-content: center;
+        order: 1;
+      }
+      & .c-searcher {
+        justify-content: center;
+        order: 2;
+      }
+      & .c-order-by-selector {
+        justify-content: center;
+        order: 3;
+      }
+    }
+    @media screen and (max-width:680px) {
+      padding: 0 10px;
+    }
+  }
+  &__line {
+    margin-top: 40px;
+    border: none;
+    height: 1px;
+    background-color: #d9d9d9;
+    display: none;
+    @media screen and (max-width:792px) {
+      display: block;
+    }
+  }
+  &__clothes {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 0;
+    @media screen and (max-width:900px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (max-width:680px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 0 5px;
+      margin-top: 30px;
+    }
+  }
+  @media screen and (max-width:680px) {
+    padding: 10px;
+  }
+}
