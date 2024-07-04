@@ -29,11 +29,15 @@ export const ClothesList:FC<{clothes: IClothes[]}> = ({clothes}) => {
         <IconsBar />
       </form>
       <hr className="c-clothes-list__line"></hr>
-      <ul className="c-clothes-list__clothes">
-        {clothesState.map((c: IClothes, i: number) => (
-          <ClothesCard key={`${c.name}-${i}`} {...c} />
-        ))}
-      </ul>
+      {clothesState.length > 0 ? (
+        <ul className="c-clothes-list__clothes">
+          {clothesState.map((c: IClothes, i: number) => (
+            <ClothesCard key={`${c.name}-${i}`} {...c} />
+          ))}
+        </ul>
+      ) : (
+        <p>No se han encontrado resultados</p>
+      )}
     </div>
   )
 }

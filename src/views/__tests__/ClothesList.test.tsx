@@ -16,6 +16,9 @@ describe('Clothes List tests', () => {
     const input = screen.getByRole('search');
     fireEvent.change(input, { target: { value: '3' } });
     expect(screen.getByText('Conjunto 3 piezas sport Better Cotton niño')).toBeInTheDocument();
+
+    fireEvent.change(input, { target: { value: 'Test' } });
+    expect(screen.getByText('No se han encontrado resultados')).toBeInTheDocument();
   });
 
   it('Sort clothes', () => {
@@ -26,5 +29,11 @@ describe('Clothes List tests', () => {
     
     const firstArticle = screen.getAllByLabelText("clothes-name")[0];
     expect(firstArticle).toHaveTextContent("Conjunto 2 piezas rayas lino niño");
+  });
+
+  it('Empty data', () => {
+    render(<ClothesList clothes={[]}/>);
+
+    expect(screen.getByText('No se han encontrado resultados')).toBeInTheDocument();
   });
 });

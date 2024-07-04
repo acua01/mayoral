@@ -13,18 +13,18 @@ type TProps = {
 };
 
 export const Select: FC<TProps> = ({ label, value, onChange, options }) => (
-  <div className="c-order-by-selector" role="searchbox">
+  <div className="c-select" role="searchbox">
     <label 
-      className="c-order-by-selector__label" 
-      id="order-by-selector-label" 
+      className="c-select__label" 
+      id="select-label" 
       htmlFor="search-input"
     >
       {label}
     </label>
     <select 
-      id="order-by-selector" 
-      className="c-order-by-selector__selector" 
-      aria-labelledby="order-by-selector-label"
+      id="select" 
+      className="c-select__selector" 
+      aria-labelledby="select-label"
       value={value}
       onChange={onChange}
     >

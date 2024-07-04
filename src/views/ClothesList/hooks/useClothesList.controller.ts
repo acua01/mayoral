@@ -1,7 +1,7 @@
 import { IClothes } from 'models/Clothes.model';
 import { useEffect, useState } from 'react';
 import { sortClothes } from '@utils/sortClothes';
-import { TSelectOption } from '@components/Select/OrderBySelector';
+import { TSelectOption } from '@components/Select/Select';
 
 export const useClothesListController = (clothes: IClothes[]) => {
   const [clothesState, setClothesState] =
