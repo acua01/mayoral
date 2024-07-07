@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FC } from "react";
 import { getDiscountedPrice } from "@utils/getDiscountedPrice";
 import { priceFormatter } from "@utils/priceFormatter";
+import { Button } from "@components/Button/Button";
 
 export const ClothesCard: FC<IClothes> = ({image, name, price, discount, moreColors}) => {  
   return (
@@ -26,7 +27,8 @@ export const ClothesCard: FC<IClothes> = ({image, name, price, discount, moreCol
           <span className="c-clothes-card__more-colors-container__text">más colores</span>
         )}
       </div>
-      <button className="c-clothes-card__button">Añadir</button>
+      {/* <button className="c-clothes-card__button">Añadir</button> */}
+      <Button text={"Añadir"} />
     </li>
   )
 }
